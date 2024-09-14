@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# React-Redux Shopping Cart
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React shopping cart application using react redux toolkit
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- View a list of available products
+- Add or remove products from the cart
+- Needs to Increase or Decrease the per unit Quantity that should automatically update the total Quantity and Amount.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Demo
+Check out the live demo of the project[https://vibhooshana-redux-shoppingcart.netlify.app/].
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Folder Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+reduxcart-app/
 
-### `npm run build`
+├── node_modules/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+├── public/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+│ ├── favicon.ico
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+│ └── index.html
 
-### `npm run eject`
+├── src/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+│ ├── components/
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+│ │ ├── Navbar.jsx
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+│ │ ├── ProductList.jsx
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+│ │ ├── StarRating.jsx
 
-## Learn More
+│ │ ├── Cart.jsx
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+│ │ └── Home.jsx
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+│ ├── Store/
 
-### Code Splitting
+│ │ ├── store.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+│ │ └── cartSlice.js
 
-### Analyzing the Bundle Size
+│ ├── App.css
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+│ ├── App.jsx
 
-### Making a Progressive Web App
+│ ├── index.css
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+│ ├── index.js
 
-### Advanced Configuration
+├── .gitignore
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+├── package.json
 
-### Deployment
+├── README.md
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Project Setup
 
-### `npm run build` fails to minify
+1. Set up your React application:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+
+npx create-react-app reduxcart-app
+cd reduxcart-app
+npm install @reduxjs/toolkit react-redux
+
+```
+2. Add Components
+
+Create the following components in the src/components directory:
+
+- `Navbar.jsx`
+  
+- `Home.jsx`
+  
+- `ProductList.jsx`
+  
+- `StarRating.jsx`
+  
+- `Cart.jsx`
+  
+ 
+3. Run the development server:
+
+To start the development server, use the following command:
+
+```bash
+
+npm start
+
+```
+  
+4. Open your browser and navigate to http://localhost:3000 to see the application.
+
+## Deployment
+
+To deploy your application:
+
+1. Build the project:
+
+```bash
+ npm run build
+
+```
+
+2. Deploy the `build` folder to Netlify.
+
+### Acknowledgements
+
+- React for the JavaScript library.
+- reduxtoolkit for store
+- Bootstrap and mui core components for styling.
+- Netlify for providing the platform to deploy the application.ion.
